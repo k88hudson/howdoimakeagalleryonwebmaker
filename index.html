@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>I bang spacebar</title>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: menlo, monospace;
+      width: 1000px;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+    pre, code {
+      font-size: inherit;
+      font-family: menlo, monospace;
+      background: #E9E9E9;
+      color: #777;
+      border-radius: 3px;
+    }
+    pre {
+      padding: 15px;
+    }
+    code {
+      padding: 3px;
+      color: #A81A4B;
+    }
+    .pink {
+      color: #A81A4B;
+    }
+    .gallery-info {
+      width: 500px;
+      border: 1px solid #DDD;
+      float: left;
+    }
+    .steps {
+      width: 500px;
+      float: left;
+      padding-left: 15px;
+    }
+    ol {
+      counter-reset: l;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    li:before {
+      display: inline-block;
+      content: counter(l);
+      counter-increment: l;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      font-size: 12px;
+      border-radius: 20px;
+      margin-left: -30px;
+      margin-right: 10px;
+      color: white;
+
+    }
+
+    #step-1:before {
+      background-color: #3FB58E;
+    }
+    #step-2:before {
+      background-color: #3FA9F5;
+    }
+    #step-3:before {
+      background-color: #FF7BAC;
+    }
+    #step-4:before {
+      background-color: #1A1A1A;
+    }
+    #step-5:before {
+      background-color: #ED1C24;
+    }
+    #step-6:before {
+      background-color: #FF931E;
+    }
+  </style>
+</head>
+<body>
+<h1>How to create webmaker galleries and add content</h1>
+<p>This guide uses a fictional gallery called '/bacon' on webmaker.org</p>
+<img class="gallery-info" src="galleryinfo.png">
+<div class="steps">
+  <ol>
+    <li id="step-1">Choose a main section of the site (Explore, Make, Teach)</li>
+    <li id="step-2">Choose a navigation label for the gallery</li>
+    <li id="step-3">Write a main heading. It should be a short phrase that describes the main focus of the gallery.</li>
+    <li id="step-4">Write a short, descriptive paragraph to support the heading.</li>
+    <li id="step-5"><strong>Lead gallery:</strong> Login to <a href="https://makeapi.webmaker.org">makeapi.webmaker.org</a> to tag makes for the lead gallery. You should use tags in the following format:
+    <pre>
+webmaker:<span class="pink">keyword</span>-<span class="pink">#</span></pre>
+      where <code>#</code> is the position of the make in the gallery.</li>
+    <li id="step-6">The area below the gallery can be filled with makes using tags in the following format:
+        <pre>
+webmaker:<span class="pink">keyword</span></pre>
+    </li>
+  </ol>
+</div>
+</body>
+</html>
